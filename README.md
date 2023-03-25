@@ -109,5 +109,6 @@ But I am expecting this, or something like this (I know I can not get exactly th
    ]
 }
 ```
+As best score I use HardSoftScore -1hard/-1000soft, based on my constraints I suppose it would find solution in that rande, even thouhg SoftScore is never used.
 
 This is still work in progress, I hope that open source community will be able to help
