@@ -1,5 +1,7 @@
 # opta-planner-nqueens
-OptaPlanner NQueens with more queens than needed
+OptaPlanner NQueens with more queens than necessary.
+
+I used OptaPlanner for native Java app, not SpringBoot implementation of OptaPlanner, because of my future needs.
 
 This is implementation of OptaPlanner for solving a problem of NQueens but with more queens than necessary. Example:
 
@@ -75,7 +77,7 @@ This is exampe of response that I get:
 }
 ```
 
-But I am expecting this: 
+But I am expecting this, or something like this (I know I can not get exactly the same response): 
 ```json
 {
    "queenList":[
