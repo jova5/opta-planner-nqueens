@@ -8,7 +8,7 @@ import org.optaplanner.core.api.domain.solution.PlanningScore;
 import org.optaplanner.core.api.domain.solution.PlanningSolution;
 import org.optaplanner.core.api.domain.solution.ProblemFactCollectionProperty;
 import org.optaplanner.core.api.domain.valuerange.ValueRangeProvider;
-import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore;
+import org.optaplanner.core.api.score.buildin.hardmediumsoft.HardMediumSoftScore;
 
 import java.util.List;
 
@@ -23,7 +23,7 @@ public class ChessTable {
     @PlanningEntityCollectionProperty
     private List<Queen> queenList;
     @PlanningScore
-    private HardSoftScore score;
+    private HardMediumSoftScore score;
 
     public ChessTable() {
     }
@@ -48,11 +48,11 @@ public class ChessTable {
         return queenList;
     }
 
-    public HardSoftScore getScore() {
+    public HardMediumSoftScore getScore() {
         return score;
     }
 
-    public void setScore(HardSoftScore score) {
+    public void setScore(HardMediumSoftScore score) {
         this.score = score;
     }
 }

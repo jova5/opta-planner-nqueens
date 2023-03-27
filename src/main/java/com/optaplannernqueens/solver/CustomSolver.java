@@ -15,13 +15,13 @@ public class CustomSolver {
                                                                 Class<? extends ConstraintProvider> constraintProviderClass,
                                                                 E bestSolutionEventListener) {
         Class<?> problemClass = problem.getClass();
-        TerminationConfig terminationConfig =
-                new TerminationConfig()
-                        .withBestScoreLimit("-1hard/-1000soft") // set the best score limit
-                                       .withBestScoreFeasible(true) // set to terminate on feasible solutions
-                                       .withScoreCalculationCountLimit(
-                                               100000L)
-                ; // set the maximum number of score calculations
+//        TerminationConfig terminationConfig =
+//                new TerminationConfig()
+//                        .withBestScoreLimit("0hard/4medium/-1000soft") // set the best score limit
+//                                       .withBestScoreFeasible(true) // set to terminate on feasible solutions
+//                                       .withScoreCalculationCountLimit(
+//                                               100000L)
+//                ; // set the maximum number of score calculations
         SolverFactory<T> solverFactory = SolverFactory.create(new SolverConfig().withSolutionClass(problemClass)
                                                                                 .withEntityClasses(entityClass)
                                                                                 .withConstraintProviderClass(
@@ -30,8 +30,8 @@ public class CustomSolver {
                                                                                         Duration.ofSeconds(duration))
                                                                                 .withConstraintStreamImplType(
                                                                                         ConstraintStreamImplType.BAVET)
-                                                                                .withTerminationConfig(
-                                                                                        terminationConfig)
+//                                                                                .withTerminationConfig(
+//                                                                                        terminationConfig)
                                                              );
         Solver<T> solver = solverFactory.buildSolver();
         if (bestSolutionEventListener != null) {
