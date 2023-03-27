@@ -78,4 +78,4 @@ This is exampe of response that I get:
 }
 ```
 
-Be aware that you probably wouldn't get same response, but 4 queens should be assigned while 5th queen should have either row or column assigned as null or both of them assigned as null.
+Be aware that you probably wouldn't get the same response, but 4 queens should be assigned while 5th queen should have either row or column assigned as null or both of them assigned as null.
