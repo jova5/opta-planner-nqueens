@@ -5,7 +5,7 @@ I used OptaPlanner for native Java app, not SpringBoot implementation of OptaPla
 
 This is implementation of OptaPlanner for solving a problem of NQueens but with more queens than necessary. Example:
 
-ChessBoaer size = 4x4
+ChessBoard size = 4x4
 Number of queens = 5
 
 This is exampe of response that I get:
@@ -42,73 +42,40 @@ This is exampe of response that I get:
     "queenList": [
         {
             "id": 0,
-            "columnIndex": 3,
-            "rowIndex": null
+            "rowIndex": 1,
+            "columnIndex": 3
         },
         {
             "id": 1,
-            "columnIndex": null,
-            "rowIndex": 1
+            "rowIndex": 3,
+            "columnIndex": 2
         },
         {
             "id": 2,
-            "columnIndex": null,
-            "rowIndex": null
+            "rowIndex": 0,
+            "columnIndex": 1
         },
         {
             "id": 3,
-            "columnIndex": 1,
-            "rowIndex": 3
+            "rowIndex": 2,
+            "columnIndex": 0
         },
         {
             "id": 4,
-            "columnIndex": 0,
-            "rowIndex": 1
+            "rowIndex": null,
+            "columnIndex": 2
         }
     ],
     "score": {
         "initScore": 0,
-        "hardScore": -1,
+        "hardScore": 0,
+        "mediumScore": 4,
         "softScore": 0,
-        "feasible": false,
+        "feasible": true,
         "zero": false,
         "solutionInitialized": true
     }
 }
 ```
 
-But I am expecting this, or something like this (I know I can not get exactly the same response): 
-```json
-{
-   "queenList":[
-      {
-         "id":0,
-         "columnIndex":null,
-         "rowIndex":null
-      },
-      {
-         "id":1,
-         "columnIndex":2,
-         "rowIndex":0
-      },
-      {
-         "id":2,
-         "columnIndex":0,
-         "rowIndex":1
-      },
-      {
-         "id":3,
-         "columnIndex":3,
-         "rowIndex":2
-      },
-      {
-         "id":4,
-         "columnIndex":1,
-         "rowIndex":3
-      }
-   ]
-}
-```
-As best score I use HardSoftScore -1hard/-1000soft, based on my constraints I suppose it would find solution in that range, even thouhg SoftScore is never used.
-
-This is still work in progress, I hope that open source community will be able to help
+Be aware that you probably wouldn't get same response, but 4 queens should be assigned while 5th queen should have either row or column assigned as null or both of them assigned as null.
