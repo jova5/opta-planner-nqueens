@@ -5,7 +5,7 @@ I used OptaPlanner for native Java app, not SpringBoot implementation of OptaPla
 
 This is implementation of OptaPlanner for solving a problem of NQueens but with more queens than necessary. Example:
 
-Questio on stackowerflow [link](https://stackoverflow.com/questions/75844167/optaplanner-solution-for-nqueens-problem-with-more-queens-on-chess-board-than-ne).
+Question on stackowerflow [link](https://stackoverflow.com/questions/75844167/optaplanner-solution-for-nqueens-problem-with-more-queens-on-chess-board-than-ne).
 
 ChessBoard size = 4x4
 Number of queens = 5
